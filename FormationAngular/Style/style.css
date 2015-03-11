@@ -1,2 +1,5 @@
-/* Styles go here */
-
+.leftColumn {
+    border: 1px solid gray;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}

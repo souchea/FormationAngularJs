@@ -1,6 +1,6 @@
 angular.module("MyApp").service('accountData', function() {
      return {
-       getAccountData: 
+         getAccountData: 
           [{
             "id" : 1,
            "familyName": "John", 
@@ -10,7 +10,7 @@ angular.module("MyApp").service('accountData', function() {
            "amount": -12
           },
           {
-            "id" : 1,
+            "id" : 2,
            "familyName": "John", 
            "firstName": "Toto3",
            "email": "souchet.aurelien@gmail.com",
@@ -18,7 +18,7 @@ angular.module("MyApp").service('accountData', function() {
            "amount": 75
           },
           {
-            "id" : 1,
+            "id" : 3,
            "familyName": "John", 
            "firstName": "Toto4",
            "email": "souchet.aurelien@gmail.com",
@@ -26,12 +26,16 @@ angular.module("MyApp").service('accountData', function() {
            "amount": 654
           },
           {
-            "id" : 1,
+            "id" : 4,
            "familyName": "John", 
            "firstName": "Toto",
            "email": "souchet.aurelien@gmail.com",
            "accountNumber": 6, 
            "amount": 45
           }
-    ]}
+          ],
+      addAccount: function(account) {
+          getAccountData.push(account);
+      }
+     }
 });

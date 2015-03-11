@@ -66,11 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="Script\angular-ui-router.js" />
+    <Content Include="Script\bankOperationController.js" />
     <Content Include="Script\controller.js" />
     <Content Include="Script\directive.js" />
+    <Content Include="Script\route.js" />
     <Content Include="Script\service.js" />
     <Content Include="Style\style.css" />
     <Content Include="Template\template.html" />
+    <Content Include="View\list.html" />
+    <Content Include="View\main.html" />
+    <Content Include="View\minus.html" />
+    <Content Include="View\operation.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

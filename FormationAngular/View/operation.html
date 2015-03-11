@@ -1,0 +1,35 @@
+﻿<div class="form-group">
+    <label for="">Select an account</label>
+    <select class="form-control"
+            ng-options="account.id as (account.familyName + ' ' + account.firstName) for account in accounts"
+            ng-model="selectedAccountId" />
+</div>
+<br />
+<table class="table table-bordered table-striped">
+    <tbody>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Account number</th>
+        <th>amount</th>
+    </tr>
+    <tr ng-class="selectedAccount.amount < 0 ? 'danger' : 'success'">
+        <td>{{ selectedAccount.id }}</td>
+        <td>{{ selectedAccount.familyName + ' ' + selectedAccount.firstName }}</td>
+        <td>{{ selectedAccount.email }}</td>
+        <td>{{ selectedAccount.accountNumber }}</td>
+        <td>{{ selectedAccount.amount }}</td>
+    </tr>
+    </tbody>
+</table>
+<br />
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        Write an amount
+        <input type="number" class="form-control" ng-model="toChangeValue"/>
+        <button class="btn btn-success" ng-click="addMoney()"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button><br/>
+        <button class="btn btn-warning" ng-click="removeMoney()"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Subtract</button><br/>
+    </div>
+</div>

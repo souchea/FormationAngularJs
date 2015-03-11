@@ -1,4 +1,4 @@
-var app = angular.module("MyApp", []);
+var app = angular.module("MyApp", ["ui.router"]);
 
 angular.module("MyApp").controller('bankAccountController', ['$scope', 'accountData',
   function(scope, accountData) {
@@ -18,7 +18,7 @@ angular.module("MyApp").controller('bankAccountController', ['$scope', 'accountD
     };
 
     scope.addClient = function() {
-      scope.accounts.push({
+      accountData.addAccount({
         "id": 1,
         "familyName": scope.toAddFamilyName,
         "firstName": scope.toAddFirstName,
